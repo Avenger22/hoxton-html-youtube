@@ -5,7 +5,12 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    transition: 1s;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
 
 body {
     font-family: sans-serif;
@@ -22,10 +27,7 @@ html {
 
 a {
     transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
+    color: #111111;
 }
 
 /* HERE THE GIRD LAYOUT FOR THE PAGE */
@@ -46,7 +48,7 @@ section.container-menus header.header {
     display: grid;
     grid-template: 
     "header-sub-1 header-sub-2 header-sub-3" 1fr /
-    0.2fr 0.9fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
+    0.2fr 0.7fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
     background-color: #f9f9f9;
 }
 
@@ -108,26 +110,47 @@ section.container-menus header.header .header-sub-3 {
     place-items: center;
     justify-content: center;
     /* align-content: start; */
+    width: 100%;
 }
 
 section.container-menus aside.left-menu .left-menu-sub-1 {
     grid-area: left-menu-sub-1;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+    display: grid;
+    place-items: center;
+    justify-content: left;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* align-content: start; */
 }
 
 section.container-menus aside.left-menu .left-menu-sub-2 {
     grid-area: left-menu-sub-2;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+    display: grid;
+    place-items: center;
+    justify-content: left;
+    grid-template-rows: 1fr 1fr;
+    /* align-content: start; */
 }
 
 section.container-menus aside.left-menu .left-menu-sub-3 {
     grid-area: left-menu-sub-3;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+    display: grid;
+    place-items: center;
+    justify-content: left;
+    grid-template-rows: 1fr;
+    /* align-content: start; */
 }
 
 section.container-menus aside.left-menu .left-menu-sub-4 {
     grid-area: left-menu-sub-4;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+    display: grid;
+    place-items: center;
+    justify-content: left;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* align-content: start; */
 }
 
 /* section.container-menus aside.left-menu .left-menu-sub-5 {
@@ -169,10 +192,10 @@ header.header .header-sub-2 .header-group-2 {
 
 header.header .header-sub-3 .header-group-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 20px;
     place-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     /* padding-right: 10px; */
     width: 100%;
 }
@@ -182,7 +205,7 @@ header.header .header-sub-3 .header-group-3 button {
     border: 1px solid #065fd4;
     background-color: #fff;
     font-size: 14px;
-    padding: 10px 10px;
+    padding: 10px 15px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-family: sans-serif;
@@ -236,18 +259,19 @@ header.header .header-sub-2 .header-group-2 input:active {
 
 header.mini-header ul.elements-wrapper {
     display: grid;
-    grid-template-columns: repeat(7, 130px);
-    grid-gap: 20px;
+    grid-template-columns: repeat(6, 130px);
+    grid-gap: 30px;
     place-items: center;
     justify-content: left;
     /* padding-left: 10px; */
-    /* overflow: scroll; */
+    overflow: hidden;
+    width: auto;
 }
 
 header.mini-header ul.elements-wrapper li {
     border-radius: 20px;
     background-color: #f5eded;
-    padding: 5px 20px;
+    padding: 5px 18px;
     font-size: 14px;
     font-family: sans-serif;
     font-weight: 500;
@@ -266,10 +290,113 @@ header.mini-header ul.elements-wrapper li:hover {
     border: 2px solid #ffffff;
 }
 
+aside.left-menu .left-menu-sub-1 .left-group-1 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* place-items: center; */
+    justify-content:left;
+    align-items: center; /* this fixe text not centering like place-items */
+    grid-gap: 35px;
+}
+
+aside.left-menu .left-menu-sub-2 .left-group-2 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: left;
+    grid-gap: 35px;
+    align-items: center;
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    grid-gap: 25px;
+    /* align-items: center; */
+    place-items: center;
+}
+
+aside.left-menu .left-menu-sub-4 .left-group-4 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: left;
+    grid-gap: 35px;
+    align-items: center;
+}
+
+aside.left-menu .left-menu-sub-1 .left-group-1 span {
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    /* text-align: left; */
+    color: #030303;
+    /* font-style: italic; */
+}
+
+aside.left-menu .left-menu-sub-2 .left-group-2 span {
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    /* text-align: left; */
+    color: #030303;
+    /* font-style: italic; */
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 span {
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    /* text-align: left; */
+    color: #030303;
+    /* font-style: italic; */
+}
+
+aside.left-menu .left-menu-sub-4 .left-group-4 span {
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: normal;
+    /* text-align: left; */
+    color: #030303;
+    /* font-style: italic; */
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 button {
+    text-transform: uppercase;
+    border: 1px solid #065fd4;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    color: #065fd4;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 button:hover {
+    background-color: #065fd4;
+    color: #fff;
+    border: 1px solid #111111;
+    transition: 1s;
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 p {
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: normal;
+    font-weight: normal;
+    padding-left: 10px;
+    
+}
 
 
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1350px) {
 
     header.mini-header ul.elements-wrapper {
         overflow: hidden;
@@ -277,7 +404,19 @@ header.mini-header ul.elements-wrapper li:hover {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
+
+    section.container-menus header.header {
+        width: 100vw;
+    }
+
+    header.header .header-sub-3 .header-group-3 {
+        width: 100vw;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
 
     section.container-menus {
         height: 100vh;
