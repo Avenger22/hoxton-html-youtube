@@ -48,7 +48,7 @@ section.container-menus header.header {
     display: grid;
     grid-template: 
     "header-sub-1 header-sub-2 header-sub-3" 1fr /
-    0.2fr 0.7fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
+    0.1fr 0.8fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
     background-color: #f9f9f9;
 }
 
@@ -118,8 +118,9 @@ section.container-menus aside.left-menu .left-menu-sub-1 {
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
     display: grid;
     place-items: center;
-    justify-content: left;
+    justify-content: center;
     grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
     /* align-content: start; */
 }
 
@@ -128,8 +129,9 @@ section.container-menus aside.left-menu .left-menu-sub-2 {
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
     display: grid;
     place-items: center;
-    justify-content: left;
+    justify-content: center;
     grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
     /* align-content: start; */
 }
 
@@ -138,8 +140,9 @@ section.container-menus aside.left-menu .left-menu-sub-3 {
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
     display: grid;
     place-items: center;
-    justify-content: left;
+    justify-content: center;
     grid-template-rows: 1fr;
+    grid-gap: 20px;
     /* align-content: start; */
 }
 
@@ -148,8 +151,9 @@ section.container-menus aside.left-menu .left-menu-sub-4 {
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
     display: grid;
     place-items: center;
-    justify-content: left;
+    justify-content: center;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
     /* align-content: start; */
 }
 
@@ -192,8 +196,8 @@ header.header .header-sub-2 .header-group-2 {
 
 header.header .header-sub-3 .header-group-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
     place-items: center;
     /* justify-content: center; */
     /* padding-right: 10px; */
@@ -205,7 +209,7 @@ header.header .header-sub-3 .header-group-3 button {
     border: 1px solid #065fd4;
     background-color: #fff;
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 10px 25px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-family: sans-serif;
@@ -246,7 +250,7 @@ header.header .header-sub-2 .header-group-2 input {
 }
 
 header.header .header-sub-2 .header-group-2 button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-size: 16px;
     background-color: #f5eded;
     border: 1px solid #1e1f20;
@@ -260,7 +264,7 @@ header.header .header-sub-2 .header-group-2 input:active {
 header.mini-header ul.elements-wrapper {
     display: grid;
     grid-template-columns: repeat(6, 130px);
-    grid-gap: 30px;
+    grid-gap: 20px;
     place-items: center;
     justify-content: left;
     /* padding-left: 10px; */
@@ -271,7 +275,7 @@ header.mini-header ul.elements-wrapper {
 header.mini-header ul.elements-wrapper li {
     border-radius: 20px;
     background-color: #f5eded;
-    padding: 5px 18px;
+    padding: 5px 15px;
     font-size: 14px;
     font-family: sans-serif;
     font-weight: 500;
@@ -279,8 +283,13 @@ header.mini-header ul.elements-wrapper li {
     letter-spacing: 0.1px;
     cursor: pointer;
     border: 1px solid #aca3a3;
-    /* display: grid;
-    place-items: center; */
+    /*display: grid;
+    place-items: center;
+     */:;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 header.mini-header ul.elements-wrapper li:hover {
@@ -288,40 +297,49 @@ header.mini-header ul.elements-wrapper li:hover {
     transition: 1s;
     color: #fff;
     border: 2px solid #ffffff;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
 }
 
 aside.left-menu .left-menu-sub-1 .left-group-1 {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr;
     /* place-items: center; */
-    justify-content:left;
-    align-items: center; /* this fixe text not centering like place-items */
+    justify-content:center;
+    place-items: center;
+    /* align-items: center; */
+    /* align-content: center; this fixe text not centering like place-items */
     grid-gap: 35px;
 }
 
 aside.left-menu .left-menu-sub-2 .left-group-2 {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    justify-content: left;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
     grid-gap: 35px;
     align-items: center;
+    place-items: center;
+    align-content: center;
 }
 
 aside.left-menu .left-menu-sub-3 .left-group-3 {
     display: grid;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
-    grid-gap: 25px;
-    /* align-items: center; */
+    grid-gap: 35px;
+    align-items: center;
     place-items: center;
 }
 
 aside.left-menu .left-menu-sub-4 .left-group-4 {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    justify-content: left;
-    grid-gap: 35px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-gap: 45px;
     align-items: center;
+    place-items: center;
 }
 
 aside.left-menu .left-menu-sub-1 .left-group-1 span {
@@ -347,7 +365,7 @@ aside.left-menu .left-menu-sub-2 .left-group-2 span {
 aside.left-menu .left-menu-sub-3 .left-group-3 span {
     font-size: 14px;
     font-family: sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     font-weight: normal;
     /* text-align: left; */
     color: #030303;
@@ -357,7 +375,7 @@ aside.left-menu .left-menu-sub-3 .left-group-3 span {
 aside.left-menu .left-menu-sub-4 .left-group-4 span {
     font-size: 14px;
     font-family: sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     font-weight: normal;
     /* text-align: left; */
     color: #030303;
@@ -369,7 +387,7 @@ aside.left-menu .left-menu-sub-3 .left-group-3 button {
     border: 1px solid #065fd4;
     background-color: #fff;
     font-size: 14px;
-    padding: 10px 15px;
+    padding: 10px 10px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-family: sans-serif;
@@ -383,6 +401,10 @@ aside.left-menu .left-menu-sub-3 .left-group-3 button:hover {
     color: #fff;
     border: 1px solid #111111;
     transition: 1s;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
 }
 
 aside.left-menu .left-menu-sub-3 .left-group-3 p {
@@ -390,13 +412,17 @@ aside.left-menu .left-menu-sub-3 .left-group-3 p {
     font-family: sans-serif;
     letter-spacing: normal;
     font-weight: normal;
-    padding-left: 10px;
+    /* padding-left: 20px; */
     
 }
 
+aside.left-menu .left-menu-sub-4 .left-group-4 img {
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
 
-
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1250px) {
 
     header.mini-header ul.elements-wrapper {
         overflow: hidden;
@@ -410,13 +436,13 @@ aside.left-menu .left-menu-sub-3 .left-group-3 p {
         width: 100vw;
     }
 
-    header.header .header-sub-3 .header-group-3 {
-        width: 100vw;
-    }
+    /* header.header .header-sub-3 .header-group-3 {
+        /* width: 100vw; */
+    
 
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 600px) {
 
     section.container-menus {
         height: 100vh;
@@ -447,7 +473,7 @@ aside.left-menu .left-menu-sub-3 .left-group-3 p {
     header.header .header-sub-3 .header-group-3 {
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-gap: 5px;
+        grid-gap: 10px;
         width: 100%;
     }
 
