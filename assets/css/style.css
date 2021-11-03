@@ -1,4 +1,4 @@
-/*DEFAULT VALUES */
+/*DEFAULT VALUES  had a problem with header not quite responsive and the right header magically moved like 100 px from right to left and caused problems but with AUTO in grid fixed it also add AUTO to 900 px media query especially the last button*/
 * {
     margin: 0 0;
     padding: 0 0;
@@ -46,7 +46,7 @@ section.container-menus header.header {
     display: grid;
     grid-template: 
     "header-sub-1 header-sub-2 header-sub-3" 1fr /
-    0.2fr 0.9fr auto;
+    0.2fr 0.9fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
     background-color: #f9f9f9;
 }
 
@@ -148,9 +148,9 @@ section.container-menus aside.left-menu .left-menu-sub-8 {
 
 header.header .header-sub-1 .header-group-1 {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     place-items: center;
-    grid-gap: 5px;
+    grid-gap: 10px;
     width: 100%;
 }
 
@@ -159,13 +159,13 @@ header.header .header-sub-2 .header-group-2 {
     grid-template-columns: 450px auto;
     place-items: center;
     justify-content: center;
-    grid-gap: 20px;
+    grid-gap: 10px;
     width: 100%;
 }
 
 header.header .header-sub-3 .header-group-3 {
     display: grid;
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 5px;
     place-items: center;
     justify-content: center;
@@ -246,7 +246,7 @@ header.header .header-sub-2 .header-group-2 input:active {
         grid-template-columns: auto auto ;
         place-items: center;
         justify-content: center;
-        grid-gap: 3px;
+        grid-gap: 5px;
         width: 100%;
     }
 }
