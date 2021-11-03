@@ -46,7 +46,8 @@ section.container-menus header.header {
     display: grid;
     grid-template: 
     "header-sub-1 header-sub-2 header-sub-3" 1fr /
-    0.2fr 0.6fr 0.2fr;
+    0.2fr 0.9fr auto;
+    background-color: #f9f9f9;
 }
 
 section.container-menus header.mini-header {
@@ -81,16 +82,28 @@ section.container-menus main.main-menu {
 section.container-menus header.header .header-sub-1 {
     grid-area: header-sub-1;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    /* align-content: start; */
 }
 
 section.container-menus header.header .header-sub-2 {
     grid-area: header-sub-2;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    /* align-content: start; */
 }
 
 section.container-menus header.header .header-sub-3 {
     grid-area: header-sub-3;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    /* align-content: start; */
 }
 
 section.container-menus aside.left-menu .left-menu-sub-1 {
@@ -113,7 +126,7 @@ section.container-menus aside.left-menu .left-menu-sub-4 {
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
 }
 
-section.container-menus aside.left-menu .left-menu-sub-5 {
+/* section.container-menus aside.left-menu .left-menu-sub-5 {
     grid-area: left-menu-sub-5;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
 }
@@ -131,5 +144,109 @@ section.container-menus aside.left-menu .left-menu-sub-7 {
 section.container-menus aside.left-menu .left-menu-sub-8 {
     grid-area: left-menu-sub-8;
     outline: 0.5px solid rgba(41, 19, 19, 0.363);
+} */
+
+header.header .header-sub-1 .header-group-1 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    place-items: center;
+    grid-gap: 5px;
+    width: 100%;
 }
 
+header.header .header-sub-2 .header-group-2 {
+    display: grid;
+    grid-template-columns: 450px auto;
+    place-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+header.header .header-sub-3 .header-group-3 {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-gap: 5px;
+    place-items: center;
+    justify-content: center;
+    /* padding-right: 10px; */
+    width: 100%;
+}
+
+header.header .header-sub-3 .header-group-3 button {
+    text-transform: uppercase;
+    border: 1px solid #065fd4;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 10px 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+    color: #065fd4;
+    margin-right: 10px;
+}
+
+header.header .header-sub-2 .header-group-2 .button-search {
+    
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    width: 100%;
+}
+
+header.header .header-sub-2 .header-group-2 a {
+    /* padding-left: 100px; */
+}
+
+header.header .header-sub-2 .header-group-2 a i{
+    font-size: 26px;
+}
+
+
+header.header .header-sub-2 .header-group-2 input {
+    font-size: 16px;
+    background-color: #fff;
+    color: #111111;
+    letter-spacing: normal;
+    font-weight: normal;
+    border: 1px solid #b1b7c0;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+header.header .header-sub-2 .header-group-2 button {
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #c1c6ce;
+    border: 1px solid #1e1f20;;
+}
+
+header.header .header-sub-2 .header-group-2 input:active {
+    border: 1px solid #065fd4;
+}
+
+@media screen and (max-width: 900px) {
+    header.header .header-sub-2 .header-group-2 {
+        display: grid;
+        grid-template-columns: auto auto ;
+        place-items: center;
+        justify-content: center;
+        grid-gap: 5px;
+        width: 100%;
+    }
+
+    header.header .header-sub-3 .header-group-3 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 5px;
+        width: 100%;
+    }
+
+    header.header .header-sub-1 .header-group-1 {
+        display: grid;
+        grid-template-columns: auto auto ;
+        place-items: center;
+        justify-content: center;
+        grid-gap: 3px;
+        width: 100%;
+    }
+}
