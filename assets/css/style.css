@@ -54,6 +54,8 @@ section.container-menus header.mini-header {
     grid-area: mini-header;
     outline: 1px solid #000;
     width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
 }
 
 section.container-menus aside.left-menu {
@@ -71,12 +73,14 @@ section.container-menus aside.left-menu {
     "left-menu-sub-7" 0.3fr
     "left-menu-sub-8"; 0.3fr */
     1fr;
+    /* overflow: scroll; */
 }
 
 section.container-menus main.main-menu {
     grid-area: main-menu;
     outline: 1px solid #000;
     width: 100%;
+    /* overflow: scroll; */
 }
 
 section.container-menus header.header .header-sub-1 {
@@ -184,6 +188,15 @@ header.header .header-sub-3 .header-group-3 button {
     font-family: sans-serif;
     color: #065fd4;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+
+header.header .header-sub-3 .header-group-3 button:hover {
+    background-color: #065fd4;
+    color: #fff;
+    border: 1px solid #111111;
+    transition: 1s;
 }
 
 header.header .header-sub-2 .header-group-2 .button-search {
@@ -191,10 +204,6 @@ header.header .header-sub-2 .header-group-2 .button-search {
     display: grid;
     grid-template-columns: 1fr 0.1fr;
     width: 100%;
-}
-
-header.header .header-sub-2 .header-group-2 a {
-    /* padding-left: 100px; */
 }
 
 header.header .header-sub-2 .header-group-2 a i{
@@ -214,14 +223,76 @@ header.header .header-sub-2 .header-group-2 input {
 }
 
 header.header .header-sub-2 .header-group-2 button {
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-size: 16px;
-    background-color: #c1c6ce;
-    border: 1px solid #1e1f20;;
+    background-color: #f5eded;
+    border: 1px solid #1e1f20;
+    cursor: pointer;
 }
 
 header.header .header-sub-2 .header-group-2 input:active {
     border: 1px solid #065fd4;
+}
+
+header.mini-header ul.elements-wrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 130px);
+    grid-gap: 20px;
+    place-items: center;
+    justify-content: left;
+    /* padding-left: 10px; */
+    /* overflow: scroll; */
+}
+
+header.mini-header ul.elements-wrapper li {
+    border-radius: 20px;
+    background-color: #f5eded;
+    padding: 5px 20px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #111111;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    border: 1px solid #aca3a3;
+    /* display: grid;
+    place-items: center; */
+}
+
+header.mini-header ul.elements-wrapper li:hover {
+    background-color: #141616;
+    transition: 1s;
+    color: #fff;
+    border: 2px solid #ffffff;
+}
+
+
+
+
+@media screen and (max-width: 1250px) {
+
+    header.mini-header ul.elements-wrapper {
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    section.container-menus {
+        height: 100vh;
+        display: grid;
+        grid-template: 
+        "header" 0.1fr
+        "mini-header" 0.08fr
+        "main" 0.82fr /
+        1fr;
+    }
+
+    section.container-menus aside.left-menu {
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
