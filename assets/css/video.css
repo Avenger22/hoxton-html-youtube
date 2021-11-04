@@ -32,7 +32,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     overflow-x: hidden;
-    overflow: scroll; /* removes scroll in bottom */
+     /* removes scroll in bottom */
 }
 
 html {
@@ -52,13 +52,20 @@ section.container-menus {
     "header header" 0.1fr
     "main-menu right-menu" 0.9fr /
     0.6fr 0.4fr;
-    grid-gap: 20px;
+    grid-gap: 10px;
+
 }
 
 section.container-menus main.main-menu {
     grid-area: main-menu;
     outline: 0.5px solid #000;
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-rows: 0.9fr 0.1fr;
+    grid-gap: 10px;
     width: 100%;
+    overflow: scroll;
+    align-content: start;
 }
 
 section.container-menus aside.right-menu {
@@ -69,6 +76,8 @@ section.container-menus aside.right-menu {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     /* place-items: center; */
+    background-color: #f6f0f0;
+    overflow: scroll;
 }
 
 section.container-menus header.header {
@@ -251,6 +260,18 @@ aside.right-menu .right-menu-post img.image-post {
     width: 36px;
     grid-area: icon-post;
 } */
+
+main.main-menu .video-player {
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+
+main.main-menu .video-bottom {
+    outline: 0.5px solid #000;
+}
+
+
 
 /*making the site responsive */
 @media screen and (max-width: 1250px) {
