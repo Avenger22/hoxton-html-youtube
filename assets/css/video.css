@@ -51,7 +51,8 @@ section.container-menus {
     grid-template: 
     "header header" 0.1fr
     "main-menu right-menu" 0.9fr /
-    0.75fr 0.25fr;
+    0.6fr 0.4fr;
+    grid-gap: 20px;
 }
 
 section.container-menus main.main-menu {
@@ -64,6 +65,10 @@ section.container-menus aside.right-menu {
     grid-area: right-menu;
     outline: 0.5px solid #000;
     width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    /* place-items: center; */
 }
 
 section.container-menus header.header {
@@ -76,8 +81,8 @@ section.container-menus header.header {
     0.2fr 0.9fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
     background-color: #f9f9f9;
     grid-gap: 5px;
-    position: fixed;
-    z-index: 1;
+    /* position: fixed; */
+    /* z-index: 1; */
 }
 
 section.container-menus header.header .header-sub-1 {
@@ -203,6 +208,49 @@ header.header .header-sub-2 .header-group-2 input:active {
     border: 1px solid #065fd4;
 }
 
+aside.right-menu .right-menu-post {
+    outline: 0.1px solid #1e1f20;
+    display: grid;
+    grid-template: 
+    "image-post video-title" 0.5fr
+    "image-post video-user" auto
+    "image-post video-views" auto /
+     0.4fr 1fr;
+    grid-row-gap: 5px;
+    grid-column-gap: 10px;
+    justify-content: left;
+    align-content: start;
+    align-items: center; /*combo to make something to start in left but centered great combo */
+}
+
+aside.right-menu .right-menu-post .video-title {
+    grid-area: video-title;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+aside.right-menu .right-menu-post .video-user {
+    grid-area: video-user;
+    font-size: 12px;
+}
+
+aside.right-menu .right-menu-post .video-views {
+    grid-area: video-views;
+    font-size: 11px;
+}
+
+aside.right-menu .right-menu-post img.image-post {
+    height: 100px;
+    width: 150px;
+    grid-area: image-post;
+}
+
+/* aside.right-menu .right-menu-post img.icon-post {
+    border-radius: 20px;
+    height: 36px;
+    width: 36px;
+    grid-area: icon-post;
+} */
 
 /*making the site responsive */
 @media screen and (max-width: 1250px) {

@@ -480,6 +480,10 @@ aside.left-menu .left-menu-sub-4 .left-group-4 img {
     height: 30px;
     width: 30px;
     border-radius: 20px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 main.main-menu .main-post {
@@ -502,6 +506,10 @@ main.main-menu .main-post:hover
     margin-right: 3%;
     margin-left: 3%;
     transition: 1s;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 main.main-menu .main-post .video-title {
