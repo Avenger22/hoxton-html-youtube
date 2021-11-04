@@ -1,4 +1,6 @@
 /*DEFAULT VALUES  had a problem with header not quite responsive and the right header magically moved like 100 px from right to left and caused problems but with AUTO in grid fixed it also add AUTO to 900 px media query especially the last button*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 * {
     margin: 0 0;
     padding: 0 0;
@@ -13,7 +15,7 @@
   }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
 }
 
@@ -48,7 +50,7 @@ section.container-menus header.header {
     display: grid;
     grid-template: 
     "header-sub-1 header-sub-2 header-sub-3" 1fr /
-    0.1fr 0.8fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
+    0.2fr 0.9fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
     background-color: #f9f9f9;
 }
 
@@ -66,10 +68,10 @@ section.container-menus aside.left-menu {
     width: 100%;
     display: grid;
     grid-template: 
-    "left-menu-sub-1" 0.2fr
-    "left-menu-sub-2" 0.2fr
-    "left-menu-sub-3" 0.2fr
-    "left-menu-sub-4" 0.4fr /
+    "left-menu-sub-1" 0.15fr
+    "left-menu-sub-2" 0.15fr
+    "left-menu-sub-3" 0.15fr
+    "left-menu-sub-4" auto /
     /* "left-menu-sub-5" 0.05fr
     "left-menu-sub-6" 0.05fr
     "left-menu-sub-7" 0.3fr
@@ -187,7 +189,7 @@ header.header .header-sub-1 .header-group-1 {
 
 header.header .header-sub-2 .header-group-2 {
     display: grid;
-    grid-template-columns: 450px auto;
+    grid-template-columns: 550px auto;
     place-items: center;
     justify-content: center;
     grid-gap: 10px;
@@ -196,8 +198,8 @@ header.header .header-sub-2 .header-group-2 {
 
 header.header .header-sub-3 .header-group-3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 5px;
     place-items: center;
     /* justify-content: center; */
     /* padding-right: 10px; */
@@ -212,7 +214,7 @@ header.header .header-sub-3 .header-group-3 button {
     padding: 10px 25px;
     font-weight: 700;
     letter-spacing: 0.5px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #065fd4;
     margin-right: 10px;
     cursor: pointer;
@@ -277,7 +279,7 @@ header.mini-header ul.elements-wrapper li {
     background-color: #f5eded;
     padding: 5px 15px;
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #111111;
     letter-spacing: 0.1px;
@@ -285,11 +287,7 @@ header.mini-header ul.elements-wrapper li {
     border: 1px solid #aca3a3;
     /*display: grid;
     place-items: center;
-     */:;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+     */
 }
 
 header.mini-header ul.elements-wrapper li:hover {
@@ -297,10 +295,6 @@ header.mini-header ul.elements-wrapper li:hover {
     transition: 1s;
     color: #fff;
     border: 2px solid #ffffff;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
 }
 
 aside.left-menu .left-menu-sub-1 .left-group-1 {
@@ -344,7 +338,7 @@ aside.left-menu .left-menu-sub-4 .left-group-4 {
 
 aside.left-menu .left-menu-sub-1 .left-group-1 span {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
     font-weight: normal;
     /* text-align: left; */
@@ -354,7 +348,7 @@ aside.left-menu .left-menu-sub-1 .left-group-1 span {
 
 aside.left-menu .left-menu-sub-2 .left-group-2 span {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
     font-weight: normal;
     /* text-align: left; */
@@ -364,7 +358,7 @@ aside.left-menu .left-menu-sub-2 .left-group-2 span {
 
 aside.left-menu .left-menu-sub-3 .left-group-3 span {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
     font-weight: normal;
     /* text-align: left; */
@@ -374,7 +368,7 @@ aside.left-menu .left-menu-sub-3 .left-group-3 span {
 
 aside.left-menu .left-menu-sub-4 .left-group-4 span {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
     font-weight: normal;
     /* text-align: left; */
@@ -401,15 +395,11 @@ aside.left-menu .left-menu-sub-3 .left-group-3 button:hover {
     color: #fff;
     border: 1px solid #111111;
     transition: 1s;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
 }
 
 aside.left-menu .left-menu-sub-3 .left-group-3 p {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: normal;
     font-weight: normal;
     /* padding-left: 20px; */
