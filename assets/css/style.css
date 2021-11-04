@@ -57,7 +57,7 @@ section.container-menus {
     grid-template: 
     "header header" 0.1fr
     "left-menu mini-header" 0.08fr
-    "left-menu main" 0.82fr /
+    "left-menu main-menu" 0.82fr /
     0.15fr 0.85fr;
 }
 
@@ -106,6 +106,12 @@ section.container-menus main.main-menu {
     grid-area: main-menu;
     outline: 1px solid #000;
     width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    /* place-items: center;
+    justify-content: center; */
+
 }
 
 section.container-menus header.header .header-sub-1 {
@@ -232,7 +238,7 @@ header.header .header-sub-3 .header-group-3 button {
     border: 1px solid #065fd4;
     background-color: #fff;
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 8px 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
@@ -471,6 +477,23 @@ aside.left-menu .left-menu-sub-4 .left-group-4 img {
     border-radius: 20px;
 }
 
+main.main-menu .main-post {
+    outline: 0.5 solid #1e1f20;
+    /* grid-area: main-post; */
+}
+
+main.main-menu .row-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    place-items: center;
+    justify-content: center;
+}
+
+
+
+
+
 @media screen and (max-width: 1250px) {
     header.mini-header ul.elements-wrapper {
         overflow: hidden;
@@ -493,7 +516,7 @@ aside.left-menu .left-menu-sub-4 .left-group-4 img {
         grid-template: 
         "header" 0.1fr
         "mini-header" 0.08fr
-        "main" 0.82fr /
+        "main-menu" 0.82fr /
         1fr;
     }
 
