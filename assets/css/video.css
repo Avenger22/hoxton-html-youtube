@@ -76,6 +76,8 @@ section.container-menus header.header {
     0.2fr 0.9fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
     background-color: #f9f9f9;
     grid-gap: 5px;
+    position: fixed;
+    z-index: 1;
 }
 
 section.container-menus header.header .header-sub-1 {
