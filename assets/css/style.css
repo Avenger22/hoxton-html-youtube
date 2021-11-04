@@ -10,17 +10,35 @@
     transition: 1s;
 }
 
+.material-icons {
+    color: #141616;
+  }
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
+    background-color: transparent;
+}
+
+::-webkit-scrollbar:hover {
+    width: 10px;
+    background-color: #b1b8c2;
+    transition: 1s;
+}
+
+::-webkit-scrollbar-button {
+    width: 10px; 
+    height: 50px; 
+}
+
+::-webkit-scrollbar-button:hover {
+    width: 10px; 
+    height: 50px; 
+}
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-}
-
-.svg {
-    padding-top: 3px;
+    overflow-x: hidden; /* removes scroll in bottom */
 }
 
 html {
@@ -52,6 +70,7 @@ section.container-menus header.header {
     "header-sub-1 header-sub-2 header-sub-3" 1fr /
     0.2fr 0.9fr auto; /* this is where the bug was wich cause header problems, i had all three at 1fr 1fr 1fr but when i tried auto in the last part all went perfect when responsive*/
     background-color: #f9f9f9;
+    grid-gap: 5px;
 }
 
 section.container-menus header.mini-header {
@@ -78,13 +97,15 @@ section.container-menus aside.left-menu {
     "left-menu-sub-8"; 0.3fr */
     1fr;
     overflow: scroll;
+    grid-gap: 10px;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
 }
 
 section.container-menus main.main-menu {
     grid-area: main-menu;
     outline: 1px solid #000;
     width: 100%;
-    /* overflow: scroll; */
 }
 
 section.container-menus header.header .header-sub-1 {
@@ -247,12 +268,12 @@ header.header .header-sub-2 .header-group-2 input {
     letter-spacing: normal;
     font-weight: normal;
     border: 1px solid #b1b7c0;
-    padding: 10px 10px;
+    padding: 8px 10px;
     width: 100%;
 }
 
 header.header .header-sub-2 .header-group-2 button {
-    padding: 10px 25px;
+    padding: 8px 10px;
     font-size: 16px;
     background-color: #f5eded;
     border: 1px solid #1e1f20;
