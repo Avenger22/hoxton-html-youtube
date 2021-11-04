@@ -77,7 +77,7 @@ section.container-menus aside.left-menu {
     "left-menu-sub-7" 0.3fr
     "left-menu-sub-8"; 0.3fr */
     1fr;
-    /* overflow: scroll; */
+    overflow: scroll;
 }
 
 section.container-menus main.main-menu {
@@ -265,8 +265,8 @@ header.header .header-sub-2 .header-group-2 input:active {
 
 header.mini-header ul.elements-wrapper {
     display: grid;
-    grid-template-columns: repeat(6, 130px);
-    grid-gap: 20px;
+    grid-template-columns: repeat(8, 130px);
+    grid-gap: 15px;
     place-items: center;
     justify-content: left;
     /* padding-left: 10px; */
@@ -305,14 +305,14 @@ aside.left-menu .left-menu-sub-1 .left-group-1 {
     place-items: center;
     /* align-items: center; */
     /* align-content: center; this fixe text not centering like place-items */
-    grid-gap: 35px;
+    grid-gap: 20px;
 }
 
 aside.left-menu .left-menu-sub-2 .left-group-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    grid-gap: 35px;
+    grid-gap: 20px;
     align-items: center;
     place-items: center;
     align-content: center;
@@ -322,7 +322,7 @@ aside.left-menu .left-menu-sub-3 .left-group-3 {
     display: grid;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
-    grid-gap: 35px;
+    grid-gap: 20px;
     align-items: center;
     place-items: center;
 }
@@ -331,7 +331,7 @@ aside.left-menu .left-menu-sub-4 .left-group-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    grid-gap: 45px;
+    grid-gap: 10px;
     align-items: center;
     place-items: center;
 }
@@ -341,9 +341,7 @@ aside.left-menu .left-menu-sub-1 .left-group-1 span {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
     font-weight: normal;
-    /* text-align: left; */
     color: #030303;
-    /* font-style: italic; */
 }
 
 aside.left-menu .left-menu-sub-2 .left-group-2 span {
@@ -351,9 +349,7 @@ aside.left-menu .left-menu-sub-2 .left-group-2 span {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.5px;
     font-weight: normal;
-    /* text-align: left; */
     color: #030303;
-    /* font-style: italic; */
 }
 
 aside.left-menu .left-menu-sub-3 .left-group-3 span {
@@ -361,9 +357,7 @@ aside.left-menu .left-menu-sub-3 .left-group-3 span {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
     font-weight: normal;
-    /* text-align: left; */
     color: #030303;
-    /* font-style: italic; */
 }
 
 aside.left-menu .left-menu-sub-4 .left-group-4 span {
@@ -371,9 +365,7 @@ aside.left-menu .left-menu-sub-4 .left-group-4 span {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.2px;
     font-weight: normal;
-    /* text-align: left; */
     color: #030303;
-    /* font-style: italic; */
 }
 
 aside.left-menu .left-menu-sub-3 .left-group-3 button {
@@ -386,7 +378,6 @@ aside.left-menu .left-menu-sub-3 .left-group-3 button {
     letter-spacing: 0.5px;
     font-family: sans-serif;
     color: #065fd4;
-    margin-right: 10px;
     cursor: pointer;
 }
 
@@ -402,8 +393,20 @@ aside.left-menu .left-menu-sub-3 .left-group-3 p {
     font-family: 'Roboto', sans-serif;
     letter-spacing: normal;
     font-weight: normal;
-    /* padding-left: 20px; */
-    
+    padding-left: 20px;
+}
+
+aside.left-menu .left-menu-sub-4 .special-case-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    justify-content: center;
+}
+
+aside.left-menu .left-menu-sub-4 .special-case-4 span {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
 }
 
 aside.left-menu .left-menu-sub-4 .left-group-4 img {
@@ -413,23 +416,17 @@ aside.left-menu .left-menu-sub-4 .left-group-4 img {
 }
 
 @media screen and (max-width: 1250px) {
-
     header.mini-header ul.elements-wrapper {
         overflow: hidden;
     }
-
 }
 
 @media screen and (max-width: 850px) {
-
     section.container-menus header.header {
         width: 100vw;
     }
-
     /* header.header .header-sub-3 .header-group-3 {
         /* width: 100vw; */
-    
-
 }
 
 @media screen and (max-width: 600px) {
