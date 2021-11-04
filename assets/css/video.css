@@ -24,11 +24,6 @@
     transition: 1s;
 }
 
-/* ::-webkit-scrollbar-button {
-    width: 10px; 
-    height: 50px; 
-} */
-
 ::-webkit-scrollbar-button:hover {
     width: 10px;  
 }
@@ -54,9 +49,20 @@ section.container-menus {
     display: grid;
     grid-template: 
     "header header" 0.1fr
-    "left-menu mini-header" 0.08fr
-    "left-menu main-menu" 0.82fr /
-    0.15fr 0.85fr;
+    "main-menu right-menu" 0.9fr /
+    0.75fr 0.25fr;
+}
+
+section.container-menus main.main-menu {
+    grid-area: main-menu;
+    outline: 0.5px solid #000;
+    width: 100%;
+}
+
+section.container-menus aside.right-menu {
+    grid-area: right-menu;
+    outline: 0.5px solid #000;
+    width: 100%;
 }
 
 section.container-menus header.header {
