@@ -497,10 +497,7 @@ main.main-menu .main-post:hover
     transform: scale(1.2);
     margin-right: 3%;
     margin-left: 3%;
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
+    transition: 1s;
 }
 
 main.main-menu .main-post .video-title {
