@@ -31,7 +31,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    overflow-x: hidden; /* removes scroll in bottom */
+    overflow-x: hidden;
+    overflow: scroll; /* removes scroll in bottom */
 }
 
 html {
@@ -198,4 +199,60 @@ header.header .header-sub-2 .header-group-2 button {
 
 header.header .header-sub-2 .header-group-2 input:active {
     border: 1px solid #065fd4;
+}
+
+
+/*making the site responsive */
+@media screen and (max-width: 1250px) {
+    
+}
+
+@media screen and (max-width: 850px) {
+    section.container-menus header.header {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    section.container-menus {
+        height: 100vh;
+        display: grid;
+        grid-template: 
+        "header" 0.1fr
+        "main-menu" 0.9fr /
+        1fr;
+    }
+
+    section.container-menus aside.right-menu {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    header.header .header-sub-2 .header-group-2 {
+        display: grid;
+        grid-template-columns: auto auto ;
+        place-items: center;
+        justify-content: center;
+        grid-gap: 5px;
+        width: 100%;
+    }
+
+    header.header .header-sub-3 .header-group-3 {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        width: 100%;
+    }
+
+    header.header .header-sub-1 .header-group-1 {
+        display: grid;
+        grid-template-columns: auto auto ;
+        place-items: center;
+        justify-content: center;
+        grid-gap: 5px;
+        width: 100%;
+    }
 }
