@@ -107,11 +107,13 @@ section.container-menus main.main-menu {
     outline: 1px solid #000;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 20px;
-    /* place-items: center;
-    justify-content: center; */
-
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    place-items: center;
+    justify-content: center;
+    overflow: scroll;
+    /* overflow-x: hidden; */
+    padding-top: 25px;
 }
 
 section.container-menus header.header .header-sub-1 {
@@ -479,13 +481,53 @@ aside.left-menu .left-menu-sub-4 .left-group-4 img {
 
 main.main-menu .main-post {
     outline: 0.5 solid #1e1f20;
+    display: grid;
+    grid-template: 
+    "image-post image-post image-post" 0.7fr
+    "icon-post video-title video-title" 0.2fr
+    "icon-post video-user video-user" 0.05fr
+    "icon-post video-views video-views" 0.05fr /
+    0.2fr 0.4fr 0.4fr;
+    grid-row-gap: 5px;
+    grid-column-gap: 3px;
     /* grid-area: main-post; */
 }
+
+main.main-menu .main-post .video-title {
+    grid-area: video-title;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+main.main-menu .main-post .video-user {
+    grid-area: video-user;
+    font-size: 12px;
+}
+
+main.main-menu .main-post .video-views {
+    grid-area: video-views;
+    font-size: 12px;
+}
+
+main.main-menu .main-post img.image-post {
+    height: 150px;
+    width: 260px;
+    grid-area: image-post;
+}
+
+main.main-menu .main-post img.icon-post {
+    border-radius: 20px;
+    height: 36px;
+    width: 36px;
+    grid-area: icon-post;
+}
+
+
 
 main.main-menu .row-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
+    grid-gap: 15px;
     place-items: center;
     justify-content: center;
 }
