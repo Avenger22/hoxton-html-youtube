@@ -232,15 +232,26 @@ header.header .header-sub-3 .header-group-3 button {
     border: 1px solid #065fd4;
     background-color: #fff;
     font-size: 14px;
-    padding: 10px 25px;
+    padding: 10px 20px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-family: 'Roboto', sans-serif;
     color: #065fd4;
     margin-right: 10px;
     cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
 }
 
+header.header .header-sub-3 .header-group-3 button i {
+    color: #065fd4;
+}
+
+header.header .header-sub-3 .header-group-3 button:hover i {
+    color: #e0e4eb;
+    transition: 1s;
+}
 
 header.header .header-sub-3 .header-group-3 button:hover {
     background-color: #065fd4;
@@ -394,18 +405,42 @@ aside.left-menu .left-menu-sub-3 .left-group-3 button {
     border: 1px solid #065fd4;
     background-color: #fff;
     font-size: 14px;
-    padding: 10px 10px;
+    padding: 10px 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
     font-family: sans-serif;
     color: #065fd4;
     cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
 }
 
 aside.left-menu .left-menu-sub-3 .left-group-3 button:hover {
     background-color: #065fd4;
     color: #fff;
     border: 1px solid #111111;
+    transition: 1s;
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 i{
+    color: #065fd4;
+    transition: 1s;
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 span{
+    color: #065fd4;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 button:hover i{
+    color: #fff;
+    transition: 1s;
+}
+
+aside.left-menu .left-menu-sub-3 .left-group-3 button:hover span{
+    color: #fff;
     transition: 1s;
 }
 
