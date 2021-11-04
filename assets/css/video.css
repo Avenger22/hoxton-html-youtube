@@ -264,27 +264,112 @@ aside.right-menu .right-menu-post img.image-post {
 main.main-menu .video-player {
     display: grid;
     place-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 main.main-menu .video-bottom {
     outline: 0.5px solid #000;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid #065fd4;
 }
+
+main.main-menu .video-bottom .header-video {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    grid-gap: 10px;
+    padding-left: 50px;
+}
+
+/* main.main-menu .video-bottom .row-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+} */
+
+/* main.main-menu .video-bottom .group-video-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+} */
+
+main.main-menu .video-bottom .group-video-2 {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    place-items: center;
+    grid-gap: 5px;
+    padding-right: 50px;
+}
+
+main.main-menu .video-bottom h2 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+main.main-menu .video-bottom .group-video-1 span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+main.main-menu .video-bottom .group-video-2 span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+main.main-menu .video-bottom .group-video-2 i {
+    font-size: 26px;
+    color: #065fd4;
+}
+
+
+/* main.main-menu .video-bottom .icon-1-video {
+    grid-area: icon-1;
+    display:grid;
+}
+main.main-menu .video-bottom .group-video-1 {
+    grid-area: group-video-1;
+    display:grid;
+}
+
+main.main-menu .video-bottom .icon-2-video {
+    grid-area: icon-2;
+    display:grid; 
+}
+main.main-menu .video-bottom .icon-3-video {
+    grid-area: icon-3;
+    display:grid;
+}
+main.main-menu .video-bottom .icon-4-video {
+    grid-area: icon-4;
+    display:grid;
+} */
 
 
 
 /*making the site responsive */
 @media screen and (max-width: 1250px) {
-    
+    .video-player iframe {
+        height: 400px;
+        width: 600px;
+    }
 }
 
 @media screen and (max-width: 850px) {
     section.container-menus header.header {
         width: 100vw;
     }
+
+    .video-player iframe {
+        height: 400px;
+        width: 400px;
+    }
+
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
     section.container-menus {
         height: 100vh;
