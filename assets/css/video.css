@@ -324,30 +324,75 @@ main.main-menu .video-bottom .group-video-2 i {
     color: #065fd4;
 }
 
-
-/* main.main-menu .video-bottom .icon-1-video {
-    grid-area: icon-1;
-    display:grid;
-}
-main.main-menu .video-bottom .group-video-1 {
-    grid-area: group-video-1;
-    display:grid;
+main.main-menu .video-username {
+    display: grid;
+    place-items: center;
+    justify-content: center;
 }
 
-main.main-menu .video-bottom .icon-2-video {
-    grid-area: icon-2;
-    display:grid; 
+main.main-menu .video-username .wrapper {
+    display: grid;
+    grid-template: 
+    "img-video title-video btn-video" 0.15fr
+    "img-video span-video btn-video" 0.15fr
+    "img-video p-video p-video" 0.6fr
+    "img-video a-video a-video" 0.1fr /
+    0.1fr 0.6fr 0.3fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+    outline: 0.5px solid #000;
 }
-main.main-menu .video-bottom .icon-3-video {
-    grid-area: icon-3;
-    display:grid;
+
+main.main-menu .video-username .wrapper .title-wrapper {
+    display: grid;
+    grid-template: 
+    "title-video" 1fr
+    "span-video" 1fr /
+    1fr;
+    grid-gap: 5px;
 }
-main.main-menu .video-bottom .icon-4-video {
-    grid-area: icon-4;
-    display:grid;
-} */
 
 
+main.main-menu .video-username img.img-video {
+    grid-area: img-video;
+    border-radius: 20px;
+}
+main.main-menu .video-username h3.title-video {
+    grid-area: title-video;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+main.main-menu .video-username span.span-video {
+    grid-area: span-video;
+    font-size: 12px;
+    /* padding-top: 10px; */
+}
+main.main-menu .video-username p.p-video {
+    grid-area: p-video;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+main.main-menu .video-username a.a-video {
+    grid-area: a-video;
+    color: #065fd4;
+}
+main.main-menu .video-username button.btn-video {
+    grid-area: btn-video;
+    height:45px;
+    width: 125px;
+    font-size: 14px;
+    background-color: #cc0000;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: normal;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main.main-menu .video-username .btn-wrapper {
+    display: grid;
+    justify-content: right;
+}
 
 /*making the site responsive */
 @media screen and (max-width: 1250px) {
