@@ -33,6 +33,7 @@ body {
     font-size: 12px;
     overflow-x: hidden;
      /* removes scroll in bottom */
+     /* overflow: scroll; */
 }
 
 html {
@@ -53,6 +54,7 @@ section.container-menus {
     "main-menu right-menu" 0.9fr /
     0.6fr 0.4fr;
     grid-gap: 10px;
+    /* overflow: scroll; */
 
 }
 

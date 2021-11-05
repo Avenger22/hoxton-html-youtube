@@ -58,6 +58,7 @@ section.container-menus {
     "left-menu mini-header" 0.08fr
     "left-menu main-menu" 0.82fr /
     0.15fr 0.85fr;
+    /* overflow: scroll; */
 }
 
 section.container-menus header.header {
@@ -114,8 +115,8 @@ section.container-menus main.main-menu {
     grid-gap: 30px;
     place-items: center;
     justify-content: center;
-    overflow: scroll;
-    /* overflow-x: hidden; */
+    overflow: scroll; 
+    overflow-x: hidden; 
     padding-top: 25px;
 }
 
