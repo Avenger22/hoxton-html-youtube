@@ -62,7 +62,7 @@ section.container-menus main.main-menu {
     background-color: #f9f9f9;
     display: grid;
     grid-template-rows: 0.9fr 0.1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
     width: 100%;
     overflow: scroll;
     align-content: start;
@@ -393,6 +393,55 @@ main.main-menu .video-username .btn-wrapper {
     display: grid;
     justify-content: right;
 }
+
+main.main-menu .video-ribbon {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    /* justify-content: center; */
+}
+
+main.main-menu .video-ribbon .ribbon-wrapper-row-1 {
+    display: grid;
+    grid-template-columns: 0.2fr 30px 0.7fr;
+    grid-gap: 10px;
+    justify-content: left;
+    align-items: center;
+    padding-left: 50px;
+}
+
+main.main-menu .video-ribbon .ribbon-wrapper-row-2 {
+    display: grid;
+    grid-template-columns: 0.1fr auto;
+    grid-gap: 10px;
+    justify-content: left;
+    align-items: center;
+    padding-left: 50px;
+}
+
+main.main-menu .video-ribbon .ribbon-wrapper-row-1 span {
+    font-size: 16px;
+}
+
+main.main-menu .video-ribbon .ribbon-wrapper-row-2 span  {
+    font-size: 14px;
+}
+
+.video-ribbon textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+}
+
+.video-ribbon img {
+    border-radius: 50px;
+}
+
+
+
+
+
 
 /*making the site responsive */
 @media screen and (max-width: 1250px) {
