@@ -324,10 +324,13 @@ main.main-menu .video-bottom .group-video-2 i {
     color: #065fd4;
 }
 
+
+
 main.main-menu .video-username {
     display: grid;
-    place-items: center;
-    justify-content: center;
+    /* place-items: center; */
+    justify-content: left;
+    outline: 0.5px solid #000;
 }
 
 main.main-menu .video-username .wrapper {
@@ -340,7 +343,7 @@ main.main-menu .video-username .wrapper {
     0.1fr 0.6fr 0.3fr;
     grid-row-gap: 10px;
     grid-column-gap: 5px;
-    outline: 0.5px solid #000;
+    padding-left: 50px;
 }
 
 main.main-menu .video-username .wrapper .title-wrapper {
@@ -355,7 +358,7 @@ main.main-menu .video-username .wrapper .title-wrapper {
 
 main.main-menu .video-username img.img-video {
     grid-area: img-video;
-    border-radius: 20px;
+    border-radius: 50px;
 }
 main.main-menu .video-username h3.title-video {
     grid-area: title-video;
@@ -379,7 +382,8 @@ main.main-menu .video-username a.a-video {
 }
 main.main-menu .video-username button.btn-video {
     grid-area: btn-video;
-    height:45px;
+    height:35px;
+    cursor: pointer;
     width: 125px;
     font-size: 14px;
     background-color: #cc0000;
@@ -399,6 +403,8 @@ main.main-menu .video-ribbon {
     grid-template-rows: 1fr 1fr;
     grid-gap: 10px;
     /* justify-content: center; */
+    padding-left: 50px;
+    outline: 0.5px solid #111111;
 }
 
 main.main-menu .video-ribbon .ribbon-wrapper-row-1 {
@@ -407,7 +413,7 @@ main.main-menu .video-ribbon .ribbon-wrapper-row-1 {
     grid-gap: 10px;
     justify-content: left;
     align-items: center;
-    padding-left: 50px;
+    /* padding-left: 50px; */
 }
 
 main.main-menu .video-ribbon .ribbon-wrapper-row-2 {
@@ -416,7 +422,7 @@ main.main-menu .video-ribbon .ribbon-wrapper-row-2 {
     grid-gap: 10px;
     justify-content: left;
     align-items: center;
-    padding-left: 50px;
+    /* padding-left: 50px; */
 }
 
 main.main-menu .video-ribbon .ribbon-wrapper-row-1 span {
@@ -436,10 +442,97 @@ main.main-menu .video-ribbon .ribbon-wrapper-row-2 span  {
 
 .video-ribbon img {
     border-radius: 50px;
+    height: 40px;
+    width: 40px;   
 }
 
+main.main-menu .video-comments {
+    display: grid;
+    /* place-items: center; */
+    justify-content: left;
+    outline: 0.5px solid #000;
+    grid-gap: 35px;
+}
 
+main.main-menu .video-comments .comments-wrapper {
+    display: grid;
+    grid-template: 
+    "img-comments h4-wrapper h4-wrapper" 0.15fr
+    "img-comments p-comments p-comments" 0.6fr
+    "img-comments like-wrapper like-wrapper" 0.15fr
+    "img-comments a-comments a-comments" 0.1fr /
+    0.1fr 0.6fr 0.3fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 5px;
+    padding-left: 50px;
+}
 
+main.main-menu .video-comments .comments-wrapper .like-wrapper {
+    display: grid;
+    grid-template-columns: 20px 20px 20px 150px;
+    grid-gap: 15px;
+}
+
+main.main-menu .video-comments .comments-wrapper .img-comments {
+    grid-area: img-comments;
+}
+
+main.main-menu .video-comments .comments-wrapper img {
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;   
+}
+
+main.main-menu .video-comments .comments-wrapper .h4-wrapper {
+    grid-area: h4-wrapper;
+    display: grid;
+    grid-template-columns: 150px 150px;
+}
+
+main.main-menu .video-comments .comments-wrapper .h4-wrapper h4 {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* main.main-menu .video-comments .comments-wrapper .span-1-comments {
+    grid-area: span-1-comments;
+} */
+
+main.main-menu .video-comments .comments-wrapper .p-comments {
+    grid-area: p-comments;
+}
+
+main.main-menu .video-comments .comments-wrapper .p-comments {
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+
+main.main-menu .video-comments .comments-wrapper .like-wrapper {
+    grid-area: like-wrapper;
+}
+
+main.main-menu .video-comments .comments-wrapper .like-wrapper i.material-icons {
+    font-size: 18px;
+    color: #065fd4;
+}
+
+/* main.main-menu .video-comments .comments-wrapper .icon-comments {
+    grid-area: icon-comments;
+} */
+
+/* main.main-menu .video-comments .comments-wrapper .span-reply {
+    grid-area: span-reply;
+} */
+
+main.main-menu .video-comments .comments-wrapper .a-comments {
+    grid-area: a-comments;
+}
+
+main.main-menu .video-comments .comments-wrapper .a-comments{
+    color: #065fd4;
+}
 
 
 
